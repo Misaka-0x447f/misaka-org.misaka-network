@@ -37,7 +37,9 @@
 </div>
 </body>
 <script>
-    document.addEventListener('keydown', function (event) {
+    // 预加载音频文件
+    const audio = new Audio('alarm.wav');
+    document.addEventListener('keydown', (event) => {
         if (event.key === 'Insert') {
             const cursor = document.getElementById('blink-cursor-internal');
             if (cursor) {
@@ -45,12 +47,10 @@
             }
         }
         if (event.key.length === 1 || event.key === 'Enter' || event.key === 'Backspace') {
-            const audio = new Audio('alarm.wav');
             audio.play();
         }
     });
-    document.addEventListener('touchstart', function () {
-        const audio = new Audio('alarm.wav');
+    document.addEventListener('touchstart', () => {
         audio.play();
     });
 </script>
