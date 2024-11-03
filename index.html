@@ -1,56 +1,88 @@
-<header>
-    <link rel="me" href="https://mastodon.online/@Misaka_0x447f">Mastodon</link>
-</header>
-<div id="bgi">
-    <img src="image.png">
-    <div id="bgi-copyright">
-        <div style="font-size: 70%">illustrated by</div>
-        <div style="font-weight: 600"><a herf="https://www.deviantart.com/flamyuki">flamyuki</a></div>
-    </div>
-</div>
+<body>
 <div id="container" class="non-selectable">
     successfully connected to
     <h1>
-        Misaka Edge Compute Network
+        Misaka Distributed Compute Network
     </h1>
     <div id="cloudflare">
         <div>
             <span class="small">You</span><br/>Browser<br/>Working
         </div>
         <div>
-            <span class="small">misaka.org</span><br/>Hostker<br/>Working
+            <span class="small">misaka.org</span><br/>Cloudflare<br/>Working
         </div>
         <div>
-            <span class="small">Misaka 17535</span><br/>Host<br/>Kernel Panic<span id="blink-cursor"><span id="blink-cursor-internel">_</span></span>
+            <span class="small">Misaka 17535</span><br/>Host<br/><span id="blink-cursor-container">Kernel Panic<span
+                id="blink-cursor-internal"></span></span>
         </div>
     </div>
-    <br/> <span>feel free to request a subdomain as a Misaka node.</span>
-    <span>Host:
-        <a href="http://447f.misaka.org" width="50%">447f.misaka.org</a>
-    </span>
+    <div style="margin-top: 2em;">Allocate a subdomain as a Misaka node now.</div>
+    <div>Telegram:
+        <a href="https://misaka.org/tg">https://misaka.org/tg</a>
+    </div>
+    <div>Social Media:
+        <a href="https://misaka.org/bluesky">https://misaka.org/bluesky</a>
+    </div>
+    <div>Host:
+        <a href="http://447f.misaka.org">447f.misaka.org</a>
+    </div>
     <span>447f.misaka@outlook.com</span>
 </div>
+</body>
+<script>
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Insert') {
+            const cursor = document.getElementById('blink-cursor-internal');
+            if (cursor) {
+                cursor.classList.toggle('insert-cursor'); // 动态添加或删除 'active-cursor' class
+            }
+        }
+        if (event.key.length === 1 || event.key === 'Enter' || event.key === 'Backspace') {
+            const audio = new Audio('alarm.wav');
+            audio.play();
+        }
+    });
+</script>
 <style>
-    @keyframes blink{
-        0% {opacity: 0;}
-        49% {opacity: 0;}
-        50% {opacity: 1;}
-        100% {opacity: 1;}
+    @keyframes blink {
+        0% {
+            opacity: 0;
+        }
+        49% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 1;
+        }
     }
 
-    #blink-cursor {
+    #blink-cursor-container {
+        position: relative;
+    }
+
+    #blink-cursor-internal {
+        margin-left: 2px;
         opacity: 0;
-        animation: blink 1s 0.5s infinite;
+        animation: blink 1s 0.33s infinite;
+        position: absolute;
+        bottom: 0;
+        width: 1ch;
+        height: 0.1em;
+        background-color: #9cf;
     }
 
-    #blink-cursor-internel {
-        position: absolute;
+    #blink-cursor-internal.insert-cursor {
+        height: 100%;
     }
 
     :root {
         background: #001;
-        color: LAVENDER;
-        font-family: 'Consolas', 'Microsoft Jhenghei UI', 'Microsoft Yahei UI', monospace;
+        color: #9cf;
+        font-family: Hack, SFMono-Regular, Menlo, Monaco, Consolas,
+        'Liberation Mono', 'Courier New', ui-monospace, monospace;
         width: 100vw;
         height: 100vh;
         overflow: hidden;
@@ -73,7 +105,7 @@
 
     a {
         text-decoration: none;
-        color: inherit;
+        color: #f80;
         opacity: 0.8;
     }
 
@@ -101,21 +133,5 @@
 
     .non-selectable {
         user-select: none;
-    }
-
-    #bgi {
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        filter: sepia(500%) hue-rotate(180deg) brightness(70%);
-    }
-
-    #bgi-copyright {
-        position: absolute;
-        right: 0.2em;
-        bottom: 0.2em;
-        color: black;
-        text-align: right;
-        line-height: 0.9;
     }
 </style>
