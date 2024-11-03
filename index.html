@@ -49,6 +49,10 @@
             audio.play();
         }
     });
+    document.addEventListener('touchstart', function () {
+        const audio = new Audio('alarm.wav');
+        audio.play();
+    });
 </script>
 <style>
     @keyframes blink {
