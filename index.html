@@ -1,32 +1,39 @@
 <body>
-<div id="container" class="non-selectable">
-    successfully connected to
-    <h1>
-        Misaka Distributed Compute Network
-    </h1>
-    <div id="cloudflare">
-        <div>
-            <span class="small">You</span><br/>Browser<br/>Working
+<div id="container">
+    <div class="main non-selectable">
+        successfully connected to
+        <h1 class="invert">
+            Misaka Distributed Compute Network
+        </h1>
+        <div id="cloudflare">
+            <div>
+                <span class="small">You</span><br/>Browser<br/>Working
+            </div>
+            <div>
+                <span class="small">misaka.org</span><br/>Cloudflare<br/>Working
+            </div>
+            <div>
+                <span class="small">Misaka 17535</span><br/>Host<br/><span id="blink-cursor-container">Kernel Panic<span
+                    id="blink-cursor-internal"></span></span>
+            </div>
         </div>
-        <div>
-            <span class="small">misaka.org</span><br/>Cloudflare<br/>Working
+        <div style="margin-top: 2em;">Press ANY key to continue</div>
+    </div>
+    <div class="footer">
+        <div style="margin-top: 2em;">Contact admin and Allocate a subdomain as a Misaka node now.</div>
+        <div>Telegram:
+            <a href="https://misaka.org/tg">https://misaka.org/tg</a>
         </div>
-        <div>
-            <span class="small">Misaka 17535</span><br/>Host<br/><span id="blink-cursor-container">Kernel Panic<span
-                id="blink-cursor-internal"></span></span>
+        <div>Social Media:
+            <a href="https://misaka.org/bluesky">https://misaka.org/bluesky</a>
+        </div>
+        <div>Email:
+            <a href="mailto:447f@misaka.org">447f@misaka.org</a>
+        </div>
+        <div>Host:
+            <a href="http://447f.misaka.org">447f.misaka.org</a>
         </div>
     </div>
-    <div style="margin-top: 2em;">Allocate a subdomain as a Misaka node now.</div>
-    <div>Telegram:
-        <a href="https://misaka.org/tg">https://misaka.org/tg</a>
-    </div>
-    <div>Social Media:
-        <a href="https://misaka.org/bluesky">https://misaka.org/bluesky</a>
-    </div>
-    <div>Host:
-        <a href="http://447f.misaka.org">447f.misaka.org</a>
-    </div>
-    <span>447f.misaka@outlook.com</span>
 </div>
 </body>
 <script>
@@ -88,6 +95,13 @@
         overflow: hidden;
     }
 
+    .invert {
+        color: #001;
+        background: #9cf;
+        padding: 0.5em;
+        display: inline-block;
+    }
+
     #container {
         width: 100%;
         height: 100%;
@@ -133,5 +147,16 @@
 
     .non-selectable {
         user-select: none;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: auto 0;
+    }
+
+    .footer {
+        margin-bottom: 2em;
     }
 </style>
