@@ -47,10 +47,12 @@
             }
         }
         if (event.key.length === 1 || event.key === 'Enter' || event.key === 'Backspace') {
+            audio.currentTime = 0;
             audio.play();
         }
     });
     document.addEventListener('touchstart', () => {
+        audio.currentTime = 0;
         audio.play();
     });
 </script>
