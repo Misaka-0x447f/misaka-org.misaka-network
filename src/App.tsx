@@ -14,6 +14,7 @@ function App() {
             }
             if (event.key.length === 1 || event.key === 'Enter' || event.key === 'Backspace') {
                 const audio = new Audio(AlarmAudio);
+                audio.pause();
                 audio.currentTime = 0;
                 void audio.play();
             }
