@@ -1,5 +1,4 @@
 import AlarmAudio from './assets/alarm.wav'
-import './App.css'
 import {css} from '@emotion/react'
 import {useState} from 'react';
 import {useBeforeMount} from "./utils/hooks.ts";
