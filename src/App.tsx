@@ -122,13 +122,13 @@ function App() {
                 `}>
                     <div>Compile @ {__BUILT__}</div>
                     <div css={css`margin-top: 2em;`}>=== Contact me / Allocate subdomain ===</div>
-                    <div>Telegram:
+                    <div>Telegram:&nbsp;
                         <a href="https://misaka.org/tg">https://misaka.org/tg</a>
                     </div>
-                    <div>Email:
+                    <div>Email:&nbsp;
                         <a href="mailto:447f@misaka.org">447f@misaka.org</a>
                     </div>
-                    <div>Social Media:
+                    <div>Social Media:&nbsp;
                         <a href="https://misaka.org/bluesky">https://misaka.org/bluesky</a>
                     </div>
                 </div>
