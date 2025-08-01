@@ -30,7 +30,7 @@ const HTTP451 = () => {
                     `}>
                         您所在的国家或地区无法使用此服务
                     </h1>
-                    <div css={css`margin-top: 2em;`}>由于众所周知的原因或/和需要避免不必要的热度，请为 ip.misaka.org 更换国家或地区后重试。</div>
+                    <div css={css`margin-top: 2em;`}>由于众所周知的原因或/和需要避免不必要的热度，请为 <a href="https://geoip.misaka.org" target={'_blank'}>geoip.misaka.org</a> 更换国家或地区后重试。</div>
                     <div>如果您无法更换国家或地区，请前往 github 寻找并自行部署来源项目。</div>
                 </div>
                 <div css={css`
@@ -38,7 +38,7 @@ const HTTP451 = () => {
                 `}>
                     <div>Compile @ {__BUILT__}</div>
                     <div>Github:&nbsp;
-                        <a href="https://github.com/Misaka-0x447f">https://github.com/Misaka-0x447f</a>
+                        <a href="https://github.com/Misaka-0x447f" rel={'noreferrer nofollow noopener'}>https://github.com/Misaka-0x447f</a>
                     </div>
                 </div>
             </div>
