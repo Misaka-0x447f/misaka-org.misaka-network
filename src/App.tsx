@@ -54,10 +54,12 @@ function App() {
                     <h1 css={css`
                         color: #001;
                         background: #9cf;
-                        padding: 0 0.5em;
-                        line-height: 2.3;
+                        padding: 0.5em;
+                        font-size: clamp(1rem, 4vw, 2.5rem);
                         display: inline-block;
                         font-weight: 100;
+                        word-wrap: break-word;
+                        line-height: 1.2;
                     `}>
                         Misaka Distributed Compute Network
                     </h1>
@@ -65,12 +67,15 @@ function App() {
                         display: flex;
                         justify-content: space-around;
                         align-content: center;
-                        width: 50vw;
+                        width: min(90vw, 800px);
                         margin: 0 auto;
-                        font-size: 1.2em;
+                        font-size: clamp(0.8rem, 2.5vw, 1.2rem);
+                        flex-wrap: wrap;
+                        gap: 1rem;
 
-                        * {
-                            flex-basis: 10vw;
+                        & > div {
+                            flex: 1;
+                            max-width: 200px;
                         }
 
                         & .small {
@@ -115,10 +120,19 @@ function App() {
                                 `, isInsert && css`height: 1.1em;`]}></span></div>
                         </div>
                     </div>
-                    <div css={css`margin-top: 2em;`}>Press ANY key to continue</div>
+                    <div css={css`
+                        margin-top: 2em;
+                        font-size: clamp(0.9rem, 2vw, 1.1rem);
+                    `}>Press ANY key to continue</div>
                 </div>
                 <div css={css`
                     margin-bottom: 2em;
+                    font-size: clamp(0.8rem, 1.8vw, 1rem);
+                    padding: 0 1rem;
+                    
+                    & > div {
+                        margin: 0.5rem 0;
+                    }
                 `}>
                     <div>Compile @ {__BUILT__}</div>
                     <div css={css`margin-top: 2em;`}>=== Contact me / Allocate subdomain ===</div>
