@@ -64,17 +64,22 @@ function App() {
                         Misaka Distributed Compute Network
                     </h1>
                     <div css={css`
-                        display: flex;
-                        justify-content: space-around;
-                        align-content: center;
+                        display: grid;
+                        grid-template-rows: repeat(3, min-content);
+                        grid-auto-columns: 1fr;
+                        grid-auto-flow: column;
+                        justify-items: center;
+                        align-items: start;
                         width: min(90vw, 800px);
                         margin: 0 auto;
                         font-size: clamp(0.8rem, 2.5vw, 1.2rem);
-                        flex-wrap: wrap;
-                        gap: 1rem;
+                        gap: 0.5rem;
 
                         & > div {
-                            flex: 1;
+                            display: grid;
+                            grid-template-rows: auto auto auto;
+                            gap: 0.2rem;
+                            justify-items: center;
                             max-width: 200px;
                         }
 
@@ -83,15 +88,15 @@ function App() {
                             font-weight: normal;
                         }
                     `}>
-                        <div>
-                            <span className="small">You</span><br/>Browser<br/>Working
-                        </div>
-                        <div>
-                            <span className="small">misaka.org</span><br/>Cloudflare Pages<br/>Working
-                        </div>
-                        <div>
-                            <span className="small">Misaka 17535</span><br/>Host<br/>
-                            <div css={css`
+                            <span className="small">You</span>
+                            <span>Browser</span>
+                            <span>Working</span>
+                            <span className="small">misaka.org</span>
+                            <span>Cloudflare Pages</span>
+                            <span>Working</span>
+                            <span className="small">Misaka 17535</span>
+                            <span>Host</span>
+                            <span css={css`
                                 position: relative;
                             `}>Kernel Panic<span
                                 css={[css`
@@ -117,8 +122,7 @@ function App() {
                                     width: 1ch;
                                     height: 0.1em;
                                     background-color: #9cf;
-                                `, isInsert && css`height: 1.1em;`]}></span></div>
-                        </div>
+                                `, isInsert && css`height: 1.1em;`]}></span></span>
                     </div>
                     <div css={css`
                         margin-top: 2em;
@@ -127,12 +131,13 @@ function App() {
                 </div>
                 <div css={css`
                     margin-bottom: 2em;
-                    font-size: clamp(0.8rem, 1.8vw, 1rem);
+                    font-size: clamp(0.6rem, 1.2vw, 0.9rem);
                     padding: 0 1rem;
-                    
+
                     & > div {
                         margin: 0.5rem 0;
                     }
+
                 `}>
                     <div>Compile @ {__BUILT__}</div>
                     <div css={css`margin-top: 2em;`}>=== Contact me / Allocate subdomain ===</div>
